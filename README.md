@@ -5,7 +5,6 @@
 ## 使用
 
 ```bash
-docker build -t github-sync .
 docker run -d --name github-sync \
   -e GITHUB_TOKEN=你的GitHub令牌 \
   -e GITHUB_USER=你的GitHub用户名 \
