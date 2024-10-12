@@ -3,13 +3,10 @@ import os
 import requests
 from git import Repo, RemoteProgress
 import sys
-import schedule
 import time
 from datetime import datetime, timedelta
 import pytz
 import smtplib
-from email.mime.text import MIMEText
-from email.header import Header
 from dotenv import load_dotenv
 
 # 加载.env文件中的环境变量
