@@ -12,6 +12,21 @@ docker run -d --name github-sync \
   github-sync
 ```
 
+## 环境变量配置
+
+| 环境变量       | 描述                | 默认值        |
+| -------------- | ------------------- | ------------- |
+| GITHUB_TOKEN   | GitHub 个人访问令牌 | 无            |
+| GITHUB_USER    | GitHub 用户名       | 无            |
+| RUN_TIME       | 每日同步时间        | 01:00:00      |
+| TZ             | 时区                | Asia/Shanghai |
+| SMTP_SERVER    | SMTP 服务器地址     | smtp.qq.com   |
+| SMTP_PORT      | SMTP 服务器端口     | 587           |
+| SMTP_USERNAME  | SMTP 用户名         | 无            |
+| SMTP_PASSWORD  | SMTP 密码           | 无            |
+| EMAIL_SENDER   | 发件人邮箱地址      | 无            |
+| EMAIL_RECEIVER | 收件人邮箱地址      | 无            |
+
 ## 注意事项
 
 - 需要设置 GITHUB_TOKEN 和 GITHUB_USER 环境变量

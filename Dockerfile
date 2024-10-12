@@ -15,8 +15,15 @@ COPY . /app
 # 设置环境变量
 ENV PYTHONUNBUFFERED=1
 ENV TZ=Asia/Shanghai
+ENV RUN_TIME=01:00:00
 ENV GITHUB_TOKEN=123
 ENV GITHUB_USER=123
+ENV SMTP_SERVER=smtp.qq.com
+ENV SMTP_PORT=587
+ENV SMTP_USERNAME=
+ENV SMTP_PASSWORD=
+ENV EMAIL_SENDER=
+ENV EMAIL_RECEIVER=
 
 # 安装任何需要的 Python 包
 RUN pip install --no-cache-dir requests GitPython schedule pytz
