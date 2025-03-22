@@ -176,7 +176,9 @@ def parse_time(time_str):
 
 def run_at_specified_time():
     # 从环境变量获取运行时间，默认为凌晨1点
-    run_time = os.getenv("RUN_TIME", "01:00:00")
+    run_time = os.getenv("RUN_TIME")
+    if not run_time:
+        return
     run_hour, run_minute, run_second = parse_time(run_time)
 
     # 获取时区
