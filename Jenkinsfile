@@ -2,6 +2,7 @@ pipeline {
     agent {
         docker {
             image 'python:3.13.2'
+            args '-v /var/jenkins_home/pip_cache:/root/.cache/pip'
         }
     }
 
@@ -16,7 +17,7 @@ pipeline {
             steps {
                 script {
                     sh 'python --version'
-                    sh 'pip install --no-cache-dir -r requirements.txt'
+                    sh 'pip install -r requirements.txt'
                     sh 'python sync_github_repos.py'
                 }
             }
